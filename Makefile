@@ -11,9 +11,10 @@ NAME = cube
 MCU = atmega328p
 F_CPU = 16000000UL
 FORMAT = ihex
-PORT = /dev/ttyUSB0
+PORT = /dev/ttyACM0
 #BAUD_RATE = 19200
-BAUD_RATE = 57600
+#BAUD_RATE = 57600
+BAUD_RATE = 115200
 PROGRAMMER = arduino
 ARDUINO_HEADERS = ..
 CFLAGS = -Os -g -mmcu=$(MCU) -DF_CPU=$(F_CPU) \
@@ -52,7 +53,7 @@ upload: $(NAME).hex
 	@$(AVRDUDE) -vD -c$(PROGRAMMER) -b$(BAUD_RATE) -p$(MCU) -P$(PORT) -Uflash:w:$<:i
 
 list: $(NAME).lss
-	
+	@echo -n
 
 tty:
 	@echo '  STTY -F$(PORT) raw cs8 parenb -parodd -cstopb -echo 9600'
