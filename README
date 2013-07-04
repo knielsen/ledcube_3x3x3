@@ -1,0 +1,72 @@
+This is an Arduino sketch, and a PCB (KiCAD format), for a simple
+3x3x3 LED-cube.
+
+-----------------------------------------------------------------------
+Lidt om hvordan man laver 3x3x3-lysdiodeterningen.
+
+En lysdiode har en anode (+) og en katode (-):
+
+    http://www.pmptech.ca/wp-content/uploads/2012/08/LED-300x194.jpg
+
+Anoden er det lange ben, eller hvis man kigger ind i selve LED'en er det den
+lille "pind". Den skal forbindes til plus, katoden til minus.
+
+I terningen loddes LED'erne så alle anoder i eet lag er forbundet. Mens
+katoderne er forbundet tre og tre i lodrette søjler. Så hvis vi sætter plus på
+et lag af forbundne anoder, og minus på en søjle af katoder, så tænder vi
+en enkelt LED.
+
+Vi bruger mikrocontrolleren / Arduino til at tænde og slukke eet lag af LED'er
+af gangen, så hurtigt at øjet ikke kan se det blinke (ca. 5000 gange i
+sekundet). I hver iteration sætter Arduinoen plus på netop eet af anodelagene,
+og minus på katoderne på netop de LEDs som skal lyse.
+
+En LED virker ikke som en modstand efter ohms lov. Istedet har den en
+tærskelspænding (engelsk "forward voltage"). Under denne spænding lyder den
+slet ikke, over denne spænding stiger strømforbruget og lysudsendelsen meget
+hurtigt. Så man skal lave noget for at begrænse strømmen igennem LED'en,
+ellers brænder man noget af (dioden, eller i vores tilfælde nok snarere
+Arduinoen). I den lille lysdiodeterning er der valg en simpel løsning med en
+modstand loddet på hver katodesøjle. Vi skal så regne ud hvor mange ohm denne
+modstand skal have.
+
+For at se hvor meget strøm Arduinoen kan tåle kan vi se her:
+
+    http://arduino.cc/en/Main/ArduinoBoardUno
+
+Den siger
+
+    DC Current per I/O Pin         40 mA
+
+Så når vi sætter plus på et helt lag af gangen (9 LED'er), så må vi højst
+trække 40 milliampere ialt. Det er så 40/9 = 4.4 milliampere per LED. For en
+sikkerheds skyld kan vi vælge lidt lavere, f.eks. 3 mA.
+
+Arduinoen arbejder ved 5 volt. Forward voltage på en LED afhænger af typen,
+men for en hvid LED er den ofte omkring 3V. Det betyder at spændingen over
+modstanden bliver 5V - 3V = 2V.
+
+Vi kan så bruge Ohms lov: U = R * I, det vil sige
+
+  R = U / I = 2V / 3 mA = 667 ohm.
+
+Så modstanden skal vælges tæt på 667 ohm. 680 ohm er en standardværdi som er
+nem at få.
+
+Nu skal Arduinoen programmeres. Man skal installere Arduino softwaren, den kan
+downloades (gratis) fra http://www.arduino.cc/. Programmet til at styre det
+hele er her:
+
+    http://knielsen-hq.org/ledcube_3x3x3.ino
+
+Det program skal sendes til arduinoen med "upload" funktionen.
+
+Tilslut skal det forbindes til Arduinoen. Programmet er lavet sådan at
+
+ - De tre anode-lag skal forbindes til pin 11, 12, og 13 på Arduinoen.
+
+ - De 9 katode-søjler skal forbindes til pin 2-10 på Arduinoen.
+
+(Hvis man lodder pin-headers på rigtigt, så er det lavet så PCB'et kan
+sættes lige ned oven i Arduinoens pins 2-13, så skulle det hele gerne
+virke :-)

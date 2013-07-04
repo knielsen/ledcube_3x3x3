@@ -1,0 +1,209 @@
+EESchema Schematic File Version 2  date 2013-05-21T09:49:51 CEST
+LIBS:knielsenlib
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:reza_3x3x3-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "21 may 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	2750 1500 2750 1700
+Wire Wire Line
+	2650 1500 2650 1700
+Wire Wire Line
+	2550 1500 2550 1700
+Wire Wire Line
+	2100 1500 2100 1700
+Wire Wire Line
+	2000 1500 2000 1700
+Wire Wire Line
+	1900 1500 1900 1700
+Wire Wire Line
+	1800 1500 1800 1700
+Wire Wire Line
+	1700 1500 1700 1700
+Wire Wire Line
+	1600 1500 1600 1700
+Wire Wire Line
+	1500 1500 1500 1700
+Wire Wire Line
+	1400 1500 1400 1700
+Wire Wire Line
+	1300 1500 1300 1700
+Wire Wire Line
+	1300 2200 1300 2400
+Wire Wire Line
+	1400 2200 1400 2400
+Wire Wire Line
+	1500 2200 1500 2400
+Wire Wire Line
+	1600 2200 1600 2400
+Wire Wire Line
+	1700 2200 1700 2400
+Wire Wire Line
+	1800 2200 1800 2400
+Wire Wire Line
+	1900 2200 1900 2400
+Wire Wire Line
+	2000 2200 2000 2400
+Wire Wire Line
+	2100 2200 2100 2400
+$Comp
+L CONN_3 K2
+U 1 1 519B222B
+P 2650 2050
+F 0 "K2" V 2600 2050 50  0000 C CNN
+F 1 "CONN_3" V 2700 2050 40  0000 C CNN
+	1    2650 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_9 P2
+U 1 1 519B220D
+P 1700 2750
+F 0 "P2" V 1650 2750 60  0000 C CNN
+F 1 "CONN_9" V 1750 2750 60  0000 C CNN
+	1    1700 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R9
+U 1 1 519B21ED
+P 2100 1950
+F 0 "R9" V 2180 1950 50  0000 C CNN
+F 1 "680" V 2100 1950 50  0000 C CNN
+	1    2100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 519B21EA
+P 1700 1950
+F 0 "R5" V 1780 1950 50  0000 C CNN
+F 1 "680" V 1700 1950 50  0000 C CNN
+	1    1700 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 519B21E9
+P 1800 1950
+F 0 "R6" V 1880 1950 50  0000 C CNN
+F 1 "680" V 1800 1950 50  0000 C CNN
+	1    1800 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 519B21E8
+P 2000 1950
+F 0 "R8" V 2080 1950 50  0000 C CNN
+F 1 "680" V 2000 1950 50  0000 C CNN
+	1    2000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 519B21E7
+P 1900 1950
+F 0 "R7" V 1980 1950 50  0000 C CNN
+F 1 "680" V 1900 1950 50  0000 C CNN
+	1    1900 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 519B21E1
+P 1500 1950
+F 0 "R3" V 1580 1950 50  0000 C CNN
+F 1 "680" V 1500 1950 50  0000 C CNN
+	1    1500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 519B21E0
+P 1600 1950
+F 0 "R4" V 1680 1950 50  0000 C CNN
+F 1 "680" V 1600 1950 50  0000 C CNN
+	1    1600 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 519B218D
+P 1400 1950
+AR Path="/519B2180" Ref="R?"  Part="1" 
+AR Path="/519B218D" Ref="R2"  Part="1" 
+F 0 "R2" V 1480 1950 50  0000 C CNN
+F 1 "680" V 1400 1950 50  0000 C CNN
+	1    1400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 519B2180
+P 1300 1950
+F 0 "R1" V 1380 1950 50  0000 C CNN
+F 1 "680" V 1300 1950 50  0000 C CNN
+	1    1300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 K1
+U 1 1 519B2157
+P 2650 1150
+F 0 "K1" V 2600 1150 50  0000 C CNN
+F 1 "CONN_3" V 2700 1150 40  0000 C CNN
+	1    2650 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_9 P1
+U 1 1 519B2149
+P 1700 1150
+F 0 "P1" V 1650 1150 60  0000 C CNN
+F 1 "CONN_9" V 1750 1150 60  0000 C CNN
+	1    1700 1150
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

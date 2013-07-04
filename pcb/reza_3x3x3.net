@@ -1,0 +1,138 @@
+# EESchema Netlist Version 1.1 created  2013-06-10T14:14:40 CEST
+(
+ ( /519B2157 SIL-3 K1 CONN_3
+  ( 1 N-000010 )
+  ( 2 N-000011 )
+  ( 3 N-000012 )
+ )
+ ( /519B222B SIL-3 K2 CONN_3
+  ( 1 N-000012 )
+  ( 2 N-000011 )
+  ( 3 N-000010 )
+ )
+ ( /519B2149 ledcube_3x3x3 P1 CONN_9
+  ( 1 N-000013 )
+  ( 2 N-000014 )
+  ( 3 N-000015 )
+  ( 4 N-000016 )
+  ( 5 N-000017 )
+  ( 6 N-000018 )
+  ( 7 N-000019 )
+  ( 8 N-000020 )
+  ( 9 N-000021 )
+ )
+ ( /519B220D SIL-9 P2 CONN_9
+  ( 1 N-000001 )
+  ( 2 N-000004 )
+  ( 3 N-000005 )
+  ( 4 N-000003 )
+  ( 5 N-000002 )
+  ( 6 N-000007 )
+  ( 7 N-000006 )
+  ( 8 N-000008 )
+  ( 9 N-000009 )
+ )
+ ( /519B2180 R5_pads_2_5_mm R1 680
+  ( 1 N-000013 )
+  ( 2 N-000009 )
+ )
+ ( /519B218D R5_pads_2_5_mm R2 680
+  ( 1 N-000014 )
+  ( 2 N-000008 )
+ )
+ ( /519B21E1 R5_pads_2_5_mm R3 680
+  ( 1 N-000015 )
+  ( 2 N-000006 )
+ )
+ ( /519B21E0 R5_pads_2_5_mm R4 680
+  ( 1 N-000016 )
+  ( 2 N-000007 )
+ )
+ ( /519B21EA R5_pads_2_5_mm R5 680
+  ( 1 N-000017 )
+  ( 2 N-000002 )
+ )
+ ( /519B21E9 R5_pads_2_5_mm R6 680
+  ( 1 N-000018 )
+  ( 2 N-000003 )
+ )
+ ( /519B21E7 R5_pads_2_5_mm R7 680
+  ( 1 N-000019 )
+  ( 2 N-000005 )
+ )
+ ( /519B21E8 R5_pads_2_5_mm R8 680
+  ( 1 N-000020 )
+  ( 2 N-000004 )
+ )
+ ( /519B21ED R5_pads_2_5_mm R9 680
+  ( 1 N-000021 )
+  ( 2 N-000001 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
